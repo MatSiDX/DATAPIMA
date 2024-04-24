@@ -31,7 +31,8 @@ pima <- read_csv(url, col_types = cols(
     edad = age,
     tipo_diabetes = type
   )
-
+# Eliminar la primera columna (rownames)
+pima <- pima[, -1]
 # Análisis exploratorio de datos
 dim(pima) # Dimensiones del conjunto de datos
 names(pima) # Nombres de las columnas
